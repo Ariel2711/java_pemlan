@@ -11,15 +11,16 @@ public class App {
 
 		QuadraticEquation qe = new QuadraticEquation(a, b, c);
 
+		double discriminant = qe.getDiscriminant();
+
 		System.out.print("The equation has ");
-		if (qe.getDiscriminant() < 0)
-			System.out.println("no real roots");
-		else if (qe.getDiscriminant() > 0) 
+		if (discriminant > 0)
 			System.out.println("two roots " + qe.getRoot1() + 
 				" and " + qe.getRoot2());
+		else if (discriminant == 0) 
+			System.out.println("one root " + qe.getRoot1());
 		else 
-			System.out.println("one root " + (qe.getRoot1() > 0 ? 
-				qe.getRoot1() : qe.getRoot2()));
+			System.out.println("no roots");
 
         scanner.close();
 	}
