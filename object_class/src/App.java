@@ -13,6 +13,8 @@ public class App {
 
 		double discriminant = qe.getDiscriminant();
 
+		System.out.println("Discriminant : " + discriminant);
+
 		System.out.print("The equation has ");
 		if (discriminant > 0)
 			System.out.println("two roots " + qe.getRoot1() + 
