@@ -8,7 +8,7 @@ public class App {
 
 		System.out.print("Enter five string : ");
 
-		for (int i = 0; i < 5; i++)
+		for (int i = 0; i <= 4; i++)
 			stack.push(scanner.next());
 
 		for (int i = 4; i >= 0; i--)

@@ -1,30 +1,31 @@
 import java.util.ArrayList;
 
-public class MyStack extends ArrayList {
-    public boolean isEmpty(){
-        return super.isEmpty();
-    }
+public class MyStack extends ArrayList<Object> {
+    // @Override
+    // public boolean isEmpty(){
+    //     return this.isEmpty();
+    // }
 
     public int getSize() {
-        return super.size();
+        return this.size();
     }
 
     public Object peek(int i) {
-        return super.get(i);
+        return this.get(i);
     }
 
     public Object pop() {
-        Object o = get(super.size() - 1);
-        super.remove(super.size() - 1);
+        Object o = get(this.size() - 1);
+        this.remove(this.size() - 1);
         return o;
     }
     
     public void push(Object o) {
-        super.add(o);
+        this.add(o);
     }
 
     @Override
     public String toString() {
-        return "Stack: " + super.toString();
+        return "Stack: " + this.toString();
     }
 }
