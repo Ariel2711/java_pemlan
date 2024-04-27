@@ -11,8 +11,9 @@ public class App {
 		for (int i = 0; i <= 4; i++)
 			stack.push(scanner.next());
 
+		System.out.print("Reverse order : ");
 		for (int i = 4; i >= 0; i--)
-			System.out.println(stack.peek(i));
+			System.out.print(stack.peek(i) + " ");
 
 		scanner.close();
 	}
